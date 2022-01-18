@@ -3,10 +3,18 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-start-registration',
-  template: ` <app-button (click)="navigate()">SEND YOUR PACKAGE</app-button> `,
+  template: `
+            <img src="../../assets/package.png"/>    
+             <app-button (click)="navigate()">
+                SEND YOUR PACKAGE
+              </app-button>
+
+          `,
   styles: [`
       :host {
         display: flex;
+        flex-direction: column;
+        gap: 50px;
         height: 100%;
         align-items: center;
         justify-content: center;
@@ -16,8 +24,13 @@ import { Router } from '@angular/router';
       app-button{
         height: 50px;
         width: 250px;
-        padding-bottom: 200px;
       }
+
+      img {
+        border-radius: 30px;
+        height: 100px;
+      }
+
         
   `],
 })
